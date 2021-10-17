@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.AddNoteFragment">
+
+    <EditText
+        android:id="@+id/editNote"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:ems="10"
+        android:hint="Enter Note!"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="today"
+        app:backgroundTint="#ED0303" />
+
+    <Button
+        android:id="@+id/btnWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="this week"
+        app:backgroundTint="#F66B00" />
+
+    <Button
+        android:id="@+id/btnMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="this month"
+        app:backgroundTint="#CCC707" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:text="save" />
+</LinearLayout>
