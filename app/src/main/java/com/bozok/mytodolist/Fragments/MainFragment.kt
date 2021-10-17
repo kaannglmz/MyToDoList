@@ -20,6 +20,7 @@ class MainFragment : Fragment() {
     var noteList=ArrayList<String>()
     var idList=ArrayList<Int>()
     var colorList=ArrayList<String>()
+
     var time=DateFormat.getTimeInstance()
     var date=DateFormat.getDateInstance()
 
@@ -27,9 +28,6 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
     }
 
     override fun onCreateView(
@@ -68,8 +66,6 @@ class MainFragment : Fragment() {
 
     fun getDataSql(){
 
-        //Collections.sort(colorList)
-
         try {
 
             context?.let {
@@ -79,7 +75,6 @@ class MainFragment : Fragment() {
                 val noteIndex=cursor.getColumnIndex("note")
                 val idIndex=cursor.getColumnIndex("id")
                 val colorIndex=cursor.getColumnIndex("color")
-                val colorIdIndex=cursor.getColumnIndex("colorId")
 
                 noteList.clear()
                 idList.clear()
@@ -91,14 +86,12 @@ class MainFragment : Fragment() {
                     idList.add(cursor.getInt(idIndex))
                     colorList.add(cursor.getString(colorIndex))
 
-
                 }
 
                 noteAdapter.notifyDataSetChanged() // verilerin değiştiğini bildiriyoruz ki güncelleme olsun.
                 cursor.close()
 
             }
-
 
         }catch (e:Exception){
             e.printStackTrace()

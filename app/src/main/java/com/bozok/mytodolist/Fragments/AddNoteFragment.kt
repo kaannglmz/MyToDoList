@@ -63,8 +63,6 @@ class AddNoteFragment : Fragment() {
                 statement.bindString(1,noteName)
                 statement.bindString(2,saveTimeColor)
 
-
-
                 statement.execute()
 
             }
@@ -77,8 +75,6 @@ class AddNoteFragment : Fragment() {
             Navigation.findNavController(view).navigate(action)
 
         }
-
-
 
         super.onViewCreated(view, savedInstanceState)
     }
