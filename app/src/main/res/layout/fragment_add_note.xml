@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="102dp"
         android:ems="10"
+        android:maxLength="35"
         android:hint="Enter Note!"
         android:inputType="textPersonName" />
 
